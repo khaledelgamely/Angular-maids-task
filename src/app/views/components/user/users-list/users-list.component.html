@@ -1,0 +1,21 @@
+
+<h2 *ngIf="loading | async">
+    Loading...
+</h2>
+ 
+<div class="users-container">
+    <div (click)="getUserDetails(user.id)" *ngFor = "let user of users | async; let i = index" class="user">
+        <img [src]="user.avatar" alt="avatar" />
+        <p>id: {{user.id}}</p>
+        <h4>Name: {{user.first_name}} {{user.last_name}}</h4>
+        <p>Email: {{user.email}}</p>
+    </div>
+</div>
+<div class="not-existing" *ngIf="(users | async)?.length === 0 && loading">
+    <h3>This User Is Not Existing...</h3>
+</div>
+
+
+<div class="paginator" *ngIf="(users | async)?.length !== 1">
+    <span (click)="getPageNumber(id)" *ngFor = "let page of numberOfPages; let id = index">{{id}}</span>
+</div>

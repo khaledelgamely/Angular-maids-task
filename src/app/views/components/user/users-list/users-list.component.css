@@ -1,0 +1,75 @@
+.users-container{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.user{
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    margin: 1%; 
+    border: 1px solid #000;
+    border-radius: 30px;
+    background-color: #ededed;
+}
+
+.user img{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 300px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+h4 {
+    margin: 10px 0;
+}
+
+.paginator {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.paginator span{
+    margin: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(53, 164, 181);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.not-existing{
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 767px) {
+    .user {
+      width: 45%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .user {
+      width: 80%;
+    }
+    .users-container{
+        gap: 30px;
+        margin-top: 10px;
+    }
+}
